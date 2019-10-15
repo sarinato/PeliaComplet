@@ -1,0 +1,313 @@
+$offwhite: transparent $primary-color transparent transparent;
+$border_color_2: #e5e5e5;
+$border_color_3: transparent transparent transparent $primary-color;
+
+.medicament {
+	.medicament-tab {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin-top: 14px;
+
+		ul {
+			li.nav-item {
+				margin-right: 10px;
+
+				a {
+					font-family: $secondary_font;
+					text-transform: uppercase;
+					font-size: 1.5rem;
+					font-weight: 500;
+					display: block;
+					border-radius: 10px;
+					border: 1px solid #e5e5e5;
+					padding: 20px 30px;
+					background: linear-gradient(to right, rgba(5, 117, 230, .9), rgba(3, 141, 254, .8));
+
+					color: $white;
+					position: relative;
+
+					span {
+						margin-top: 2px;
+						font-family: $primary-font;
+						display: block;
+						font-size: 1rem;
+						font-weight: 400;
+						color: $white;
+
+					}
+
+					&:after {
+
+						position: absolute;
+						left: 0;
+						bottom: -20px;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 20px 20px 0;
+						border-color: $offwhite;
+					}
+				}
+			}
+		}
+	}
+
+	.medicament-contents {
+
+		margin-top: 30px;
+		margin-bottom: 30px;
+		// padding: 30px;
+
+		.medicament-item {
+			table {
+				width: 100%;
+				margin-bottom: 0;
+
+				.headings {
+					height: 4rem;
+					background: $primary-color;
+					color: $white;
+					text-transform: uppercase;
+					font-family: $secondary_font;
+
+					.name {
+						width: 20%;
+					}
+
+					.type {
+						width: 25%;
+					}
+
+					.dose {
+						width: 25%;
+					}
+
+					.frequence {
+						width: 20%;
+					}
+
+					.modifier {
+						width: 10%;
+					}
+				}
+
+				.medicament-details.block {
+					height: 5rem;
+					border-bottom: 1px solid;
+					border-left: 1px solid;
+					border-right: 1px solid;
+					border-color: $border_color_2;
+					background: #fff;
+					width: 100%;
+					transition: .2s ease-in;
+
+					.name {
+						transition: .2s ease-in;
+					}
+
+					td {
+						color: $title-color;
+						font-family: $secondary_font;
+
+						i {
+							font-size: 1.5rem;
+							color: $primary-color2;
+						}
+					}
+
+					td:last-child {
+						height: 5rem;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+					}
+
+					&:hover {
+						box-shadow: 0px 0px 30px 0px rgba(11, 29, 66, 0.15);
+						-webkit-transform: scale(1.01);
+						transform: scale(1.01);
+
+						.name {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.medicament {
+		.medicament-tab {
+			table {
+				li.nav-item {
+					width: 100%;
+					margin-bottom: 10px;
+
+					a.active {
+						&:after {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+
+		.medicament-contents {
+			.medicament-item {
+				table {
+					tr {
+						.name {
+							width: 37%;
+						}
+
+						.type {
+							width: 60%;
+						}
+
+						.frequence {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: 480px) {
+	.medicament {
+		.medicament-contents {
+			.medicament-item {
+				table {
+					tr {
+						.name {
+							width: 48%;
+						}
+
+						.type {
+							width: 50%;
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.medicament {
+		.medicament-contents {
+			.medicament-item {
+				table {
+					tr {
+						.type {
+							width: 50%;
+						}
+
+						.dose {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+/*Form Icon*/
+.has-icon {
+	position: relative;
+}
+
+.has-icon .form-input {
+	// padding-left: 26px;
+	font-size: 18px;
+	/*padding-right6 calc(1.5em + 0.75rem);*/
+}
+
+.has-icon .form-icon {
+	position: absolute;
+	top: 47%;
+	left: 12px;
+	width: 16px;
+	height: calc(33.5px / 2);
+	margin: -1px 4px 0;
+	pointer-events: none;
+	color: inherit;
+	/*text-shadow: 1px 1px 1px rgba(127,127,127,.3);*/
+	opacity: 0.5;
+	z-index: 1;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+i.form-icon {
+	font-size: 14px;
+	line-height: 1;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+	transition: font-size 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.jours {
+	text-align: left;
+	position: relative;
+	right: 14%;
+
+}
+
+.interval {
+	& button {
+		border: none;
+		font-weight: 400;
+		cursor: pointer;
+		outline: none;
+		background-color: transparent;
+		background-size: cover;
+		height: 100px;
+		font-size: 36px;
+		vertical-align: bottom;
+	}
+
+	&.interval2 {
+		& button {
+			font-size: 26px;
+
+		}
+	}
+
+
+}
+
+.countt {
+	font-size: 30px !important;
+	width: 50px !important;
+	font-weight: 100 !important;
+}
+
+.reservation-form__count input#count,
+.reservation-form__count input#dureeTraitement {
+	font-weight: 100;
+	text-align: center;
+	vertical-align: top;
+	line-height: 1;
+	width: 200px;
+	height: 100px;
+	font-size: 80px;
+	border-bottom: solid 1px white !important;
+
+}

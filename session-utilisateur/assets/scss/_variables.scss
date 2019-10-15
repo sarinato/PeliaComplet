@@ -1,0 +1,28 @@
+/*font Variables*/
+$primary-font: 'Poppins',
+sans-serif;
+$title-font: 'Poppins',
+cursive;
+$secondary_font: "Poppins",
+sans-serif;
+$logo-font: 'Pacifico',
+cursive;
+/*Color Variables*/
+$primary-color: #3695EB;
+$Youcode:#038dfe;
+$primary-color2: #8dc63f;
+$primary-color3:#bababa;
+$title-color: #222222;
+$text-color: #777777;
+$offwhite: #f4f8ff;
+$white: #fff;
+$black:rgba(0, 0, 0, .6);
+
+
+$danger:#e91e63;
+$box_shadow_primary: 0 20px 20px rgba(54, 149, 235, 0.5);
+// #8dc63f #3695EB
+
+/*=================== fonts ====================*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');

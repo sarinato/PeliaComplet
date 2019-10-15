@@ -1,0 +1,200 @@
+.profil {
+
+  margin-top: 5rem;
+
+
+  .btn {
+    cursor: pointer;
+
+    &.btn-primary {
+      background: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background: $primary-color;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($primary-color, .5);
+      }
+    }
+
+    &.btn-secondary {
+      background: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background: $primary-color;
+        border-color: $primary-color;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($primary-color, .5);
+      }
+    }
+  }
+
+  .bg-primary {
+    background: $primary-color !important;
+  }
+
+  .navbar-nav.actions {
+    flex-direction: row;
+
+    .nav-link {
+      position: relative;
+      font-size: 16px;
+      padding: 4px 12px;
+
+      .badge {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        background: $primary-color;
+      }
+    }
+  }
+
+
+  .card {
+
+    border: none;
+    border-radius: 0;
+    margin-bottom: 30px;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 200;
+      font-size: 16px;
+    }
+
+    .row {
+      width: 100%;
+    }
+  }
+
+  .alert {
+    margin-bottom: 30px;
+  }
+
+  a.action {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+
+    &:hover {
+      color: #fff
+    }
+  }
+
+  #left {
+    margin-top: -150px;
+    flex: 0 0 300px;
+  }
+
+  #user {
+    .fa {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .card-block {
+      text-align: center;
+    }
+
+    #userImage {
+      border-radius: 30%;
+      background: url(../img/me.jpg);
+      background-size: cover;
+      background-position: center top;
+      height: 200px;
+    }
+
+    #renew {
+      display: block;
+      width: 100%;
+    }
+
+    .row {
+      width: auto;
+    }
+  }
+
+  #connections {
+    .list {
+      margin: 15px 30px;
+
+      .list-item {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        background: $primary-color;
+        cursor: pointer;
+
+        &:hover {
+          background: $primary-color
+        }
+      }
+    }
+  }
+
+  #upcomingEvents {
+    .view {
+      flex: 0 0 60px;
+    }
+  }
+
+  #goals .row .details {
+    flex: 0 0 60px;
+  }
+
+  .signup {
+    flex: 0 0 125px;
+  }
+
+  #recentActivity {
+    em {
+      font-style: normal;
+      color: $primary-color;
+    }
+
+    .right {
+      flex: 0 0 100px;
+      height: 100%;
+
+      .view {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .icon {
+    position: relative;
+    flex: 0 0 40px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+    font: normal normal normal 14px/1 FontAwesome;
+
+    &.warning:after {
+      content: "\f071";
+      position: absolute;
+      font-size: 18px;
+      top: 3px;
+      left: 28px
+    }
+
+    .fa-stack-1x {}
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav.actions {
+      position: absolute;
+      right: 70px;
+    }
+  }
+}
